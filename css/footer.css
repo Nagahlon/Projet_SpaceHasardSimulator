@@ -1,0 +1,45 @@
+		footer{
+			width: 100%;
+			position: absolute;
+			margin-top: 40em;
+		}
+
+		.footdiv{
+			width: 100%;
+			margin: 0 auto;
+			height: 8em;
+			text-align: center;
+			background: rgb(15,15,65);
+			background: linear-gradient(0deg, rgba(15,15,65,1) 0%, rgba(0,19,255,1) 51%, rgba(15,15,65,1) 100%);
+			display: table; /*Change la disposition en tableau*/
+		}
+
+		.footdiv ul{
+			margin: 0px;
+			padding: 0px;
+			display: flex;
+			list-style-type: none;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.footdiv ul li{
+			margin: 0px;
+			margin-top: 2%;
+			height: 4em;
+			padding: 0px;
+			padding-right:15%;
+			padding-left:15%;
+			border-right: 2px solid white;
+			display: table; /*Change la disposition en tableau*/
+		}
+
+		#retour{
+			height: 3em;
+			width: 100%;
+		}
+
+		#retour a{
+			border-top: 2px solid white;
+			width: 80%;
+		}

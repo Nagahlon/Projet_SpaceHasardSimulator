@@ -1,0 +1,37 @@
+		header{
+			width: 100%;
+			position: absolute;
+			z-index: 3;
+		}
+
+		.headdiv{
+			width: 100%;
+			margin: 0 auto;
+			height: 3em;
+			text-align: center;
+			background: rgb(15,15,65);
+			background: linear-gradient(0deg, rgba(15,15,65,1) 0%, rgba(0,19,255,1) 51%, rgba(15,15,65,1) 100%);
+			margin-bottom: 5em;
+			display: table; /*Change la disposition en tableau*/
+		}
+
+		.headdiv ul{
+			margin: 0px;
+			padding: 0px;
+			display: flex;
+			list-style-type: none;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.headdiv ul li{
+			margin: 0px;
+			margin-top: 1%;
+			margin-bottom: 1%;
+			height: 3em;
+			padding: 0px;
+			padding-right:15%;
+			padding-left:15%;
+			border-right: 2px solid white;
+			display: table; /*Change la disposition en tableau*/
+		}

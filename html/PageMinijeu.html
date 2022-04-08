@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>formulaire</title>
+    <style type="text/css">
+        @font-face { /*On ajoute une police*/
+            font-family: 'pixel';
+            src: url('../polices/pixels.ttf');
+        }
+
+        *{
+            font-family: pixel;
+        }
+
+        body {
+
+            background-image: url("../contenu_media/Images/Background.png");
+
+        }
+        form {
+            background: #5FBB80;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            padding: 20px;
+            width: 1000px;
+            margin: auto;
+            font-size: 30px;
+        }
+        h1 {
+        
+            font-size: 30px;
+        
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        document.write('<form method="GET" action="" id="haut" name="h">');
+        document.write('<div id="Form"');
+
+
+        document.write("<label for='butt'>Retour vers le menu principal : </label>");
+        document.write("<input type='button' id='butt' name='butt' onClick=\"window.location.href=\'../html/pagerouge.html\'\"></input><br>");
+        
+
+        document.write("<label for='jeu'>Choisissez un jeu : </label>");
+        document.write("<select id='jeux' name='jeux' onchange='AffichageJeux()' class='requis'>");
+        document.write("<OPTION value='99'>Jeux disponibles</OPTION>");
+        document.write("<OPTION value='1'>LaGaLa</OPTION>");
+        document.write("<OPTION value='2'>Space Worm</OPTION>");
+        document.write("<OPTION value='3'>Infinity and Beyond</OPTION>");
+        document.write("</select>");
+
+        document.write('</div>');
+        document.write('</form>');
+
+
+        document.write('<form method="GET" action="" id="milieu" name="m">');
+        document.write('<div id="DivMilieu"');
+        document.write('</div>');
+        document.write('</form>');
+        function AffichageJeux() {
+
+            var typejeux = document.getElementById("jeux").value;
+            console.log(typejeux);
+
+
+            var last = document.getElementById("DivMilieu");
+            last.remove();
+            var div = document.createElement("div");
+            div.setAttribute("id", "DivMilieu");
+            document.getElementById("milieu").appendChild(div);
+
+
+            if (typejeux == 1) {
+
+
+                var para = document.createElement("p");
+                document.getElementById("DivMilieu").appendChild(para);
+                var node = document.createTextNode("LaGaLa");
+                para.appendChild(node);
+
+                var lien = document.createElement("a");
+                //a modifier pour le fichier
+                lien.setAttribute("href","../contenu_media/Jeux/Shooter");
+                document.getElementById("DivMilieu").appendChild(lien);
+                var node = document.createTextNode("Lancer le jeu");
+                lien.appendChild(node);
+
+                var para = document.createElement("p");
+                document.getElementById("DivMilieu").appendChild(para);
+                var node = document.createTextNode("Pour gagner de l'argent, detruisez les ennemis sur votre route.");
+                para.appendChild(node);
+                /*var image = document.createElement("img");
+                image.setAttribute("src", "Capture.PNG");
+                document.getElementById("DivMilieu").appendChild(image);*/
+
+
+                var para = document.createElement("br");
+                document.getElementById("DivMilieu").appendChild(para);
+                var para = document.createElement("p");
+                document.getElementById("DivMilieu").appendChild(para);
+                var node = document.createTextNode("Pour controler le personnage, utilisez les touches Q et D");
+                para.appendChild(node);
+
+            }
+            if (typejeux == 2) {
+
+     
+                var para = document.createElement("p");
+                document.getElementById("DivMilieu").appendChild(para);
+                var node = document.createTextNode("Space Worm");
+                para.appendChild(node);
+
+                var lien = document.createElement("a");
+                //a modifier pour le fichier
+                lien.setAttribute("href", "../contenu_media/Jeux/Snake");
+                document.getElementById("DivMilieu").appendChild(lien);
+                var node = document.createTextNode("Lancer le jeu");
+                lien.appendChild(node);
+
+
+                var para = document.createElement("p");
+                document.getElementById("DivMilieu").appendChild(para);
+                var node = document.createTextNode("Pour gagner de l'argent, recuperez les differentes pieces trouvables sur le terrain de jeu.");
+                para.appendChild(node);
+                /*var image = document.createElement("img");
+                image.setAttribute("src", "Capture.PNG");
+                document.getElementById("DivMilieu").appendChild(image);*/
+
+
+                var para = document.createElement("br");
+                document.getElementById("DivMilieu").appendChild(para);
+                var para = document.createElement("p");
+                document.getElementById("DivMilieu").appendChild(para);
+                var node = document.createTextNode("Pour controler le personnage, utilisez les fleches directionnels");
+                para.appendChild(node);
+                
+                
+
+            }
+            if (typejeux == 3) {
+
+
+       
+
+                var para = document.createElement("p");
+                document.getElementById("DivMilieu").appendChild(para);
+                var node = document.createTextNode("Infinity and Beyond");
+                para.appendChild(node);
+
+                var lien = document.createElement("a");
+                //a modifier pour le fichier
+                lien.setAttribute("href", "../contenu_media/Jeux/Jump");
+                document.getElementById("DivMilieu").appendChild(lien);
+                var node = document.createTextNode("Lancer le jeu");
+                lien.appendChild(node);
+
+
+                var para = document.createElement("p");
+                document.getElementById("DivMilieu").appendChild(para);
+                var node = document.createTextNode("Pour gagner de l'argent, recuperez les differentes pieces trouvables sur le terrain de jeu.");
+                para.appendChild(node);
+                /*var image = document.createElement("img");
+                image.setAttribute("src", "Capture.PNG");
+                document.getElementById("DivMilieu").appendChild(image);*/
+
+
+                var para = document.createElement("br");
+                document.getElementById("DivMilieu").appendChild(para);
+                var para = document.createElement("p");
+                document.getElementById("DivMilieu").appendChild(para);
+                var node = document.createTextNode("Pour controler le personnage, utilisez la barre espace");
+                para.appendChild(node);
+
+            }
+
+        }
+
+
+    </script>
+    <!--
+    <form method="GET" action="" id="haut" name="h">
+        <fieldset name="">
+            <div>
+                <p>Vers gacha</p>
+                changer ce lien par un nouveau
+                <input type="button" value="_______" onclick=window.location.href ='../html/pagerouge.html'></input>
+            </div>
+        </fieldset>
+        <br />
+    </form>
+    <form method="GET" action="" id="milieu" name="h">
+        <fieldset name="">
+            <select id="jeux" class="requis" onchange="LanceJeux()">
+                <option value="1">LaGaLa</option>
+                <option value="2">Space Worm</option>
+                <option value="3">Infinity and beyond</option>
+            </select>
+            <script>
+
+                function LanceJeux() {
+
+                    var typejeux = document.getElementById("jeux").value;
+
+                    if (typejeux = 1) {
+
+                        console.log(typejeux);
+                        document.write("<input type='button' id='choixjeu' onclick='LanceJeux()' />")
+                        //fichier jeux shooter
+                        //<a href="C:\Users\obern\OneDrive\Bureau\gamejame">Pas un Virus</a>
+
+                    }
+
+                }
+
+
+                                        //changer ce lien par un nouveau
+                                        //<a href="C:\Users\obern\OneDrive\Bureau\gamejame">Pas un Virus</a>
+            </script>
+        </fieldset>
+    </form>-->
+</body>
+</html>

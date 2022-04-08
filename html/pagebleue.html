@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Space Hasard Simulator Bleu</title>
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<script src="../js/convertisseur.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/examblanc.css">
+	<link rel="shortcut icon" type="image/gif/x-icon" href="../contenu_media/Images/monnaie.png">
+	<script type="text/javascript" src="../js/examblanc.js"></script>
+
+</head>
+<body>
+	<header>
+		<div class="headdiv">
+			<ul>
+				<li><a href="">Machines Gacha</a></li>
+				<li><a href="PageMinijeu.html">Mini Jeux</a></li>
+				<li><a href="pagestats.html">Données de simulation</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div id="blue">
+		<img src="../contenu_media/Animation/BlueMachine/FrameBlue1.png" id="gachableu" onclick="tournebleu()">
+		<img src="../contenu_media/Animation/Capsules/KAYOUKIBOUJ.gif" id="cailloux" style="">
+		<img src="" id="capsule" onclick="rewardblue()">
+	
+	<a href="./pagerouge.html"><img id="left" src="../contenu_media/Images/arrow_left.png"></a>
+	<a href="./pageverte.html"><img id="right" src="../contenu_media/Images/arrow_right.png"></a>
+	</div>
+
+
+
+	<br>
+
+	<div id="money">
+		<img src="../html/pagerouge.html">
+		<span id="monnaiegacha">X</span>
+	</div>
+
+	<br>
+
+	<div id="zonetxt">
+<!--
+	TENTATIVE D'INTEGRATION D'UN JSON (marche en distant)
+
+	<script type="text/javascript">
+
+		function gains() {
+			console.log("hello");
+			$.getJSON("../contenu_media/CoinShooter.json", function(json) {
+			  console.log(json);
+			});
+		}
+		
+
+		//var coins = $.get("../contenu_media/CoinShooter.json");
+		//console.log(coins);
+	</script>
+
+	<button onclick="gains();" id="pull">Récupération des gains</button>
+-->
+
+	<!--Création d'un profil utilisateur-->
+
+		<form>
+		    <div><label for="utilisateur">Quel est votre nom d'utilisateur ?</label></div>
+		    <div><input type="text" id="utilisateur" placeholder="User" value=""></div>
+		    <div><button type="button" id="usbutton" onclick="assignMonUser()" value="">Soumettre</button></div>
+		</form>
+
+		<!--Convertisseur de la monnaie mini jeu en monnaie gacha-->
+
+		<form>
+		    <div><label for="somme" >Montant de pièces obtenues&nbsp;?</label></div>
+		    <div><input type="number" id="montant" placeholder="Montant"></div>
+		    <select type="text" id="typo">
+		            <option value="0">Jeu</option>
+		            <option value="1">Shooter</option>
+		            <option value="2">Snake</option>
+		            <option value="3">Saut</option>
+		    </select>
+		    <div></div><button type="button" id="soumettre" onclick="ConvMoney()" value="">Soumettre</button></div>
+		</form>
+	</div>
+	
+	<footer>
+		<div class="footdiv">
+			<ul>
+				<li><a href="">Foire aux questions</a></li>
+				<li><a href=#>Contact</a></li>
+				<li><a href="">Mentions légales</a></li>
+			</ul>
+		</div>
+		<div class="footdiv" id="retour">
+			<a href=#> Retour vers le haut</a>
+		</div>
+	</footer>
+</body>
+</html>
